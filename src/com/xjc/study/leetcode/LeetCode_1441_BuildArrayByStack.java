@@ -1,7 +1,6 @@
 package com.xjc.study.leetcode;
 
 import com.xjc.study.toolutils.ArrayUtils;
-import com.xjc.study.toolutils.IntegerUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,24 +47,76 @@ import java.util.List;
  */
 public class LeetCode_1441_BuildArrayByStack {
 
-    public static void main(String[] args) {
-        int maxArraySize = 100;
-        int minValue = 1;
-        int maxValue = 100;
-        // 随机生成数组
-        int[] target = ArrayUtils.generatorOrderUnRepeatRandomArray(maxArraySize, minValue, maxValue, false);
-        // 随机生成正整数
-        int n = IntegerUtils.generatorInt(minValue, maxValue);
-        buildArray(target, n);
+    public static List<String> buildArray(int[] target, int n) {
+        List<String> resultList = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {
+            if(i > target[target.length-1]) {
+                break;
+            }
+            if(target.length > n) {
+                resultList.add("Push");
+            }
+            if (contains(target, i)) {
+                resultList.add("Push");
+            } else {
+                resultList.add("Push");
+                resultList.add("Pop");
+            }
+        }
+        return resultList;
     }
 
-    public static List<String> buildArray(int[] target, int n) {
-        System.out.print("随机生成的Int类型正整数:n = " + n + "--->list = ");
-        List<String> list = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            list.add(String.valueOf(i + 1));
+    public static boolean contains(int[] arr, Integer targetValue) {
+        for(int s: arr){
+            if(s == targetValue) {
+                return true;
+            }
         }
-        System.out.println(list);
-        return list;
+        return false;
+    }
+
+    public static void main(String[] args) {
+       /* int testTime = 50;
+        int maxValue = 100;
+        int minValue = 1;
+        int maxArraySize = 100;
+        for (int i = 0; i < testTime; i++) {
+            // 随机生成数组
+            int[] target = ArrayUtils.generatorOrderUnRepeatRandomArray(maxArraySize, minValue, maxValue, false);
+            // 随机生成正整数
+            int n = ArrayUtils.generatorInt(minValue, maxValue);
+            System.out.print("输入: n = " + n + ",target = ");
+            ArrayUtils.printArray(target);
+            System.out.print("输出：");
+            System.out.println(buildArray(target, n));
+        }*/
+
+        int[] arr = {1, 3};
+        System.out.print("输入: n = " + 3 + ",target = ");
+        ArrayUtils.printArray(arr);
+        System.out.println("预期：" + "[Push, Push, Pop, Push]");
+        System.out.print("输出：");
+        System.out.println(buildArray(arr, 3));
+
+        int[] arr1 = {1, 2, 3};
+        System.out.print("输入: n = " + 3 + ",target = ");
+        ArrayUtils.printArray(arr1);
+        System.out.println("预期：" + "[Push, Push, Push]");
+        System.out.print("输出：");
+        System.out.println(buildArray(arr1, 3));
+
+        int[] arr2 = {1, 2};
+        System.out.print("输入: n = " + 1 + ",target = ");
+        ArrayUtils.printArray(arr2);
+        System.out.println("预期：" + "[Push, Push]");
+        System.out.print("输出：");
+        System.out.println(buildArray(arr2, 1));
+
+        int[] arr3 = {2, 3, 4};
+        System.out.print("输入: n = " + 4 + ",target = ");
+        ArrayUtils.printArray(arr3);
+        System.out.println("预期：" + "[Push, Pop, Push, Push, Push]");
+        System.out.print("输出：");
+        System.out.println(buildArray(arr3, 4));
     }
 }
