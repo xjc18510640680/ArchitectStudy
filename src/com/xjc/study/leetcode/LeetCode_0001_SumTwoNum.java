@@ -21,7 +21,7 @@ public class LeetCode_0001_SumTwoNum {
         int maxValue = 10;
         for (int i = 0; i < testTime; i++) {
             int[] arr = ArrayUtils.generatorUnOrderRepeatRandomArray(maxSize, 1, maxValue, true);
-            int target = (int)(maxValue * (Math.random() + 2));
+            int target = ArrayUtils.generatorInt(1, maxValue);
             System.out.println("target = " + target);
             twoSum(arr, target);
         }
