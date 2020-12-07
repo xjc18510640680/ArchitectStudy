@@ -1,4 +1,4 @@
-package com.xjc.study.thread;
+package com.xjc.study.thread.thread00;
 /**
  *启动线程的三种方式：1、继承thread类  2、实现runnable接口   3、线程池Executors.newCachedThread
  * @title: Thread_000_CreateFormThreadAndRunnable

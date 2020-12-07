@@ -1,11 +1,11 @@
 package com.xjc.study.thread;
 /**
  *同步和非同步方法是否可以同时调用？
- * @title: Thread_001_Syncronized
+ * @title: Thread_001_Synchronized
  * @Author 19040838
  * @Date: 2020.11.25 11:21
  */
-public class Thread_001_Syncronized {
+public class Thread_001_Synchronized {
     public synchronized void m1() {
         System.out.println(Thread.currentThread().getName() + "---m1----start");
         try {
@@ -26,7 +26,7 @@ public class Thread_001_Syncronized {
     }
 
     public static void main(String[] args) {
-        Thread_001_Syncronized ds = new Thread_001_Syncronized();
+        Thread_001_Synchronized ds = new Thread_001_Synchronized();
 
 /*
         new Thread(()->ds.m1(), "t1").start();

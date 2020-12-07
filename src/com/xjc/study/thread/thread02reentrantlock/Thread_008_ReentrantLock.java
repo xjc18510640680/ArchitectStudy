@@ -17,14 +17,14 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Thread_008_ReentrantLock {
 
     public static void main(String[] args) {
-        Thread_007_ReentrantLock thread007ReentrantLock = new Thread_007_ReentrantLock();
-        new Thread(thread007ReentrantLock::m1).start();
+        Thread_008_ReentrantLock thread008ReentrantLock = new Thread_008_ReentrantLock();
+        new Thread(thread008ReentrantLock::m1).start();
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        new Thread(thread007ReentrantLock::m2).start();
+        new Thread(thread008ReentrantLock::m2).start();
     }
 
     Lock lock = new ReentrantLock();
