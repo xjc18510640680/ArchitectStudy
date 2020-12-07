@@ -1,4 +1,4 @@
-package com.xjc.study.thread;
+package com.xjc.study.thread.thread01sync;
 /**
  *同步和非同步方法是否可以同时调用？
  * @title: Thread_001_Synchronized

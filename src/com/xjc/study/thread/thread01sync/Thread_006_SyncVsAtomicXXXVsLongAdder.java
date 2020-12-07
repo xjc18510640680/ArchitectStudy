@@ -1,4 +1,4 @@
-package com.xjc.study.thread;
+package com.xjc.study.thread.thread01sync;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.LongAdder;

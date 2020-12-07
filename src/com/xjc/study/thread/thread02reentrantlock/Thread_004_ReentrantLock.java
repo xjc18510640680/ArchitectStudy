@@ -1,4 +1,4 @@
-package com.xjc.study.thread;
+package com.xjc.study.thread.thread02reentrantlock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
@@ -8,12 +8,12 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Description TODO
  * 使用ReentrantLock还可以调用lockInterruptibly方法，可以对线程interrupt方法做出响应，
  * 在一个线程等待锁的过程中，可以被打断
- * @ClassName Thread_010_ReentrantLock
+ * @ClassName Thread_004_ReentrantLock
  * @Author Elvin
  * @Date 2020/12/5 20:00
  * @Version 1.0
  */
-public class Thread_010_ReentrantLock {
+public class Thread_004_ReentrantLock {
 
     public static void main(String[] args) {
         Lock lock = new ReentrantLock();

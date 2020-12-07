@@ -1,4 +1,4 @@
-package com.xjc.study.thread;
+package com.xjc.study.thread.thread02reentrantlock;
 
 import java.util.concurrent.TimeUnit;
 
@@ -6,15 +6,15 @@ import java.util.concurrent.TimeUnit;
  * @Description TODO
  * reentrantLock用于替代synchronized 可重入锁
  * synchronized实现方式
- * @ClassName Thread_007_ReentrantLock
+ * @ClassName Thread_001_ReentrantLock
  * @Author Elvin
  * @Date 2020/12/5 15:40
  * @Version 1.0
  */
-public class Thread_007_ReentrantLock {
+public class Thread_001_ReentrantLock {
 
     public static void main(String[] args) {
-        Thread_007_ReentrantLock thread007ReentrantLock = new Thread_007_ReentrantLock();
+        Thread_001_ReentrantLock thread007ReentrantLock = new Thread_001_ReentrantLock();
         new Thread(thread007ReentrantLock::m1).start();
         try {
             TimeUnit.SECONDS.sleep(1);

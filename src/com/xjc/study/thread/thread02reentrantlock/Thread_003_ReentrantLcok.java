@@ -1,4 +1,4 @@
-package com.xjc.study.thread;
+package com.xjc.study.thread.thread02reentrantlock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
@@ -8,17 +8,17 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Description TODO
  * ReentrantLock特别的功能可以使用trylock进行尝试锁定，不管锁定与否，方法都将继续进行，
  * synchronized如果搞不定就肯定阻塞了，ReentrantLock可以自己决定到底要不要wait
- * @ClassName Thread_009_ReentrantLcok
+ * @ClassName Thread_003_ReentrantLcok
  * @Author Elvin
  * @Date 2020/12/5 16:18
  * @Version 1.0
  */
-public class Thread_009_ReentrantLcok {
+public class Thread_003_ReentrantLcok {
 
     private Lock lock = new ReentrantLock();
 
     public static void main(String[] args) {
-        Thread_009_ReentrantLcok thread009ReentrantLcok = new Thread_009_ReentrantLcok();
+        Thread_003_ReentrantLcok thread009ReentrantLcok = new Thread_003_ReentrantLcok();
         new Thread(thread009ReentrantLcok::m1).start();
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -47,7 +47,7 @@ public class Thread_009_ReentrantLcok {
      * 使用trylock进行尝试锁定，不管锁定与否，方法都将继续进行
      * 可以根据trylock的返回值来判断是否锁定
      * 也可指定trylock的时间
-     * @ClassName Thread_009_ReentrantLcok
+     * @ClassName Thread_003_ReentrantLcok
      * @Author Elvin
      * @Date 2020/12/5 16:22
      * @Version 1.0
