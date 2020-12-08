@@ -1,4 +1,4 @@
-package com.xjc.study.thread.thread03;
+package com.xjc.study.thread.thread03juc;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
