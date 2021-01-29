@@ -39,7 +39,7 @@ public class ArrayUtils {
      * @Version  1.0
      */
     public static int[] generatorUnOrderUnRepeatRandomArray(int maxArraySize, int minValue, int maxValue, boolean defaultSize) {
-        int arraySize = defaultSize ? maxArraySize : generatorInt(minValue, maxValue);
+        int arraySize = defaultSize ? maxArraySize : generatorInt(1, maxArraySize);
         int[] arr = new int[arraySize];
         if(maxValue < minValue) {
             return arr;
