@@ -13,7 +13,7 @@ public class Demo005 {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
             StringBuilder sb = new StringBuilder();
-            sb.append(String.valueOf(sc.nextInt()));
+            sb.append(sc.nextLine());
             System.out.println(sb.reverse().toString());
         }
     }

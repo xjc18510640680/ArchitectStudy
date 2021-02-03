@@ -1,5 +1,9 @@
 package com.xjc.study.test.demo.demo20210129;
 
+import javafx.scene.transform.Scale;
+
+import java.util.Scanner;
+
 /**
  * Description: TODO 题目描述
  * 密码是我们生活中非常重要的东东，我们的那么一点不能说的秘密就全靠它了。哇哈哈. 接下来渊子要在密码之上再加一套密码，虽然简单但也安全。
@@ -17,6 +21,42 @@ package com.xjc.study.test.demo.demo20210129;
  */
 public class Demo016 {
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            String input = sc.nextLine();
+            if (input.length() > 100) {
+                System.out.println("密码长度不超过100个字符");
+                return;
+            }
+            StringBuilder sb = new StringBuilder();
+            for (char c : input.toCharArray()) {
+                if (String.valueOf(c).matches("a|b|c")) {
+                    sb.append("2");
+                } else if (String.valueOf(c).matches("d|e|f")) {
+                    sb.append("3");
+                } else if (String.valueOf(c).matches("g|h|i")) {
+                    sb.append("4");
+                } else if (String.valueOf(c).matches("j|k|l")) {
+                    sb.append("5");
+                } else if (String.valueOf(c).matches("m|n|o")) {
+                    sb.append("6");
+                } else if (String.valueOf(c).matches("p|q|r|s")) {
+                    sb.append("7");
+                } else if (String.valueOf(c).matches("t|u|v")) {
+                    sb.append("8");
+                } else if (String.valueOf(c).matches("w|x|y|z")) {
+                    sb.append("9");
+                } else if (String.valueOf(c).matches("[A-Z]")) {
+                    if ("Z".equals(String.valueOf(c))) {
+                        sb.append("a");
+                    } else {
+                        sb.append((char) (c + 1));
+                    }
+                } else {
+                    sb.append(c);
+                }
+            }
+            System.out.println(sb.toString().toLowerCase());
+        }
     }
 }

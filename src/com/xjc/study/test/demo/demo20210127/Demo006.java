@@ -1,7 +1,5 @@
 package com.xjc.study.test.demo.demo20210127;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**

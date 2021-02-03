@@ -2,7 +2,6 @@ package com.xjc.study.test.demo.demo20210128;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
-import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
