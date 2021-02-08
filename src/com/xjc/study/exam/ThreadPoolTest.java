@@ -10,7 +10,7 @@ import java.util.concurrent.*;
  * @title: Test
  * Created by 19040838 on 2021.02.02 19:24
  */
-public class Test {
+public class ThreadPoolTest {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 10, 5L,
                 TimeUnit.SECONDS, new LinkedBlockingDeque<>(8));

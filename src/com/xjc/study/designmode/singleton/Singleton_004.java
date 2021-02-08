@@ -1,7 +1,5 @@
 package com.xjc.study.designmode.singleton;
 
-import javax.xml.bind.SchemaOutputResolver;
-
 /**
  * Description: TODO
  * 不仅可以解决线程同步，还可以防止反序列化。

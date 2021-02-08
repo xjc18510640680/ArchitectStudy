@@ -9,16 +9,16 @@ public class Thread_001_Synchronized {
     public synchronized void m1() {
         System.out.println(Thread.currentThread().getName() + "---m1----start");
         try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println(Thread.currentThread().getName() + "---m1-----end");
     }
 
-    public /*synchronized*/ void m2() {
+    public synchronized void m2() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -28,13 +28,13 @@ public class Thread_001_Synchronized {
     public static void main(String[] args) {
         Thread_001_Synchronized ds = new Thread_001_Synchronized();
 
-/*
         new Thread(()->ds.m1(), "t1").start();
         new Thread(()->ds.m2(), "t2").start();
-*/
 
+/*
         new Thread(ds::m1, "t1").start();
         new Thread(ds::m2, "t2").start();
+*/
 
 		/*
 		//1.8之前的写法

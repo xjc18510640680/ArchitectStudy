@@ -3,7 +3,7 @@ package com.xjc.study.thread.thread01sync;
 import java.util.concurrent.TimeUnit;
 
 /**
- *面试题：模拟银行账户
+ *模拟银行账户
  *  对业务写方法加锁
  *  业务读方法不加锁
  *  这样行不行？
@@ -27,7 +27,7 @@ public class Thread_005_Acount {
         this.balance = balance;
     }
 
-    public /*synchronized*/ double getBalance(String name) {
+    public synchronized double getBalance(String name) {
         return this.balance = balance;
     }
 
