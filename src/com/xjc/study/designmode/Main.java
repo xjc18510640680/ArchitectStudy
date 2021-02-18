@@ -1,7 +1,5 @@
 package com.xjc.study.designmode;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 /**
  * Description: TODO
  *
