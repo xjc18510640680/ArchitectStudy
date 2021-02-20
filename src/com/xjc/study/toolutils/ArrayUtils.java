@@ -27,8 +27,8 @@ public class ArrayUtils {
         for(int i=0;i<arr.length;i++) {
             arr[i] = generatorInt(minValue, maxValue);
         }
-        System.out.print("随机生成无序可重复Int数组：");
-        printArray(arr);
+//        System.out.print("随机生成无序可重复Int数组：");
+//        printArray(arr);
         return arr;
     }
 
@@ -59,8 +59,8 @@ public class ArrayUtils {
                 count++;
             }
         }
-        System.out.print("随机生成无序不可重复Int数组：");
-        printArray(arr);
+//        System.out.print("随机生成无序不可重复Int数组：");
+//        printArray(arr);
         return arr;
     }
 
@@ -113,8 +113,6 @@ public class ArrayUtils {
             }
         }
         sort(arr);
-        System.out.print("随机生成有序不可重复Int数组：");
-        printArray(arr);
         return arr;
     }
 
@@ -163,9 +161,7 @@ public class ArrayUtils {
             return null;
         }
         int[] res = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            res[i] = arr[i];
-        }
+        System.arraycopy(arr, 0, res, 0, arr.length);
         return res;
     }
 
@@ -235,9 +231,6 @@ public class ArrayUtils {
         for (int i = arr.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (arr[j] > arr[j + 1]) {
-//                    arr[i] = arr[i] ^ arr[j];
-//                    arr[j] = arr[i] ^ arr[j];
-//                    arr[i] = arr[i] ^ arr[j];
                     exchangeValue(arr, j, j + 1);
                 }
             }
