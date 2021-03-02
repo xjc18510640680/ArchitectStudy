@@ -36,5 +36,7 @@ public class Singleton_001_EvilMan {
         Singleton_001_EvilMan singleton_001_eHan1 = Singleton_001_EvilMan.getInstance();
         singleton_001_eHan.show();
         System.out.println(singleton_001_eHan == singleton_001_eHan1);
+        System.out.println(singleton_001_eHan.equals(singleton_001_eHan1));
+        System.out.println(singleton_001_eHan.hashCode() == singleton_001_eHan1.hashCode());
     }
 }

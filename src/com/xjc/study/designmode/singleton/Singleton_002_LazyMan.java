@@ -11,7 +11,7 @@ package com.xjc.study.designmode.singleton;
  * Created by 19040838 on 2020.12.01 16:52
  */
 public class Singleton_002_LazyMan {
-    private static Singleton_002_LazyMan INSTANCE;
+    private static volatile Singleton_002_LazyMan INSTANCE;
 
     private Singleton_002_LazyMan() {}
 
