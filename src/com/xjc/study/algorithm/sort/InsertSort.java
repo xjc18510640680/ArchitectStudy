@@ -5,10 +5,10 @@ import com.xjc.study.toolutils.ArrayUtils;
 /**
  * Description: TODO
  *
- * @title: AlgorithmInsertSort
+ * @title: InsertSort
  * Created by 19040838 on 2020.11.26 21:31
  */
-public class AlgorithmInsertSort {
+public class InsertSort {
 
     /**
      * @Description 插入排序

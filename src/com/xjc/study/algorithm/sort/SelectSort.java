@@ -2,11 +2,11 @@ package com.xjc.study.algorithm.sort;
 
 /**
  * 选择排序
- * @title: AlgorithmSelectSort
+ * @title: SelectSort
  * @Author 19040838
  * @Date: 2020.11.26 14:08
  */
-public class AlgorithmSelectSort {
+public class SelectSort {
 
     /**
      * 选择排序

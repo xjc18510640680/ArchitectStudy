@@ -1,8 +1,13 @@
 package com.xjc.study.test;
 
 import com.xjc.study.toolutils.ArrayUtils;
+import com.xjc.study.toolutils.ConvertUtils;
+import com.xjc.study.toolutils.DateUtils;
 
-import java.util.Arrays;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Description: TODO
@@ -11,31 +16,12 @@ import java.util.Arrays;
  * Created by 19040838 on 2021.02.20 9:41
  */
 public class Demo {
-    public static void main(String[] args) {
-//        for (int i = 0; i < 5; i++) {
-//            System.out.println(Arrays.toString(
-//                    ArrayUtils.generatorUnOrderUnRepeatRandomArray(7, 1, 35, true)
-//            ));
-//        }
-        int[] arr = ArrayUtils.generatorUnOrderUnRepeatRandomArray(7, 1, 35, true);
-        System.out.println(Arrays.toString(arr));
-        bubbleSort(arr);
+    public static void main(String[] args) throws ParseException {
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        Collection<String> collection = Collections.unmodifiableList(list);
+        collection.add("b");
+        System.out.println(list.size());
+        ReentrantLock lock = new ReentrantLock();
     }
-
-    // 冒泡
-    public static void bubbleSort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] > arr[j]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-        System.out.println(Arrays.toString(arr));
-    }
-
-    // 选择排序
-
 }

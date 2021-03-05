@@ -5,10 +5,10 @@ import java.util.Arrays;
 /**
  * Description: TODO
  *
- * @title: AlgorithmHeapSort
+ * @title: HeapSort
  * Created by 19040838 on 2021.03.02 16:37
  */
-public class AlgorithmHeapSort {
+public class HeapSort {
     /**
      * 堆排序额外空间复杂度O(1)
      **/
@@ -27,7 +27,6 @@ public class AlgorithmHeapSort {
 //        }
         int heapSize = arr.length;
         swap(arr, 0, --heapSize);
-        System.out.println("--heapSize"+Arrays.toString(arr));
         // O(N*logN)
         // O(N)
         while (heapSize > 0) {
@@ -35,7 +34,6 @@ public class AlgorithmHeapSort {
             heapify(arr, 0, heapSize);
             // O(1)
             swap(arr, 0, --heapSize);
-            System.out.println("heapSize-" + heapSize + Arrays.toString(arr));
         }
     }
 
@@ -45,7 +43,6 @@ public class AlgorithmHeapSort {
     public static void heapInsert(int[] arr, int index) {
         while (arr[index] > arr[(index - 1) / 2]) {
             swap(arr, index, (index - 1) / 2);
-            System.out.println("index-"+index+Arrays.toString(arr));
             index = (index - 1) / 2;
         }
     }
@@ -69,7 +66,6 @@ public class AlgorithmHeapSort {
                 break;
             }
             swap(arr, largest, index);
-            System.out.println("index-"+index+Arrays.toString(arr));
             index = largest;
             left = index * 2 + 1;
         }

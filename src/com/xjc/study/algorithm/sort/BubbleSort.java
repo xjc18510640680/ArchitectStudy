@@ -2,11 +2,11 @@ package com.xjc.study.algorithm.sort;
 
 /**
  *  冒泡排序
- * @title: AlgorithmBubbleSort
+ * @title: BubbleSort
  * @Author 19040838
  * @Date: 2020.11.26 16:53
  */
-public class AlgorithmBubbleSort {
+public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         if(arr == null || arr.length < 2) {
             return;

@@ -12,25 +12,11 @@ import java.util.Arrays;
  */
 public class SortTest {
     public static void main(String[] args) {
-        int testTime = 1;
-        int maxSize = 10;
-        int maxValue = 10;
-        boolean defaultSize = true;
-        for(int i = 0; i < testTime; i++) {
-            int[] arr = ArrayUtils.generatorUnOrderRepeatRandomArray(maxSize, 1, maxValue, defaultSize);
-            int[] arr1 = ArrayUtils.copyArray(arr);
-            System.out.println("随机生成的数组：" + Arrays.toString(arr));
-            ArrayUtils.sort(arr);
-            System.out.println("Arrays.sort(arr)排序后的数组arr：" + Arrays.toString(arr));
-//            AlgorithmBubbleSort.bubbleSort(arr1);
-//            System.out.println("冒泡排序后的数组arr1：" + Arrays.toString(arr1));
-//            AlgorithmSelectSort.selectionSort(arr1);
-//            System.out.println("选择排序后的数组arr1：" + Arrays.toString(arr1));
-//            AlgorithmInsertSort.intArrayInsertSort(arr1);
-//            System.out.println("插入排序后的数组arr1：" + Arrays.toString(arr1));
-            AlgorithmHeapSort.heapSort(arr1);
-            System.out.println("堆排序后的数组arr1：" + Arrays.toString(arr1));
-            System.out.println("==============================================================");
-        }
+        int[] arr = ArrayUtils.generatorUnOrderUnRepeatRandomArray(10, 1, 20, true);
+        int[] arrCopy = ArrayUtils.copyArray(arr);
+        System.out.println("随机生成的数组：" + Arrays.toString(arr));
+        MergeSort.mergeSort(arrCopy, 0, arrCopy.length - 1);
+        System.out.println("排序后的新数组：" + Arrays.toString(arrCopy));
+        System.out.println("==============================================================");
     }
 }
