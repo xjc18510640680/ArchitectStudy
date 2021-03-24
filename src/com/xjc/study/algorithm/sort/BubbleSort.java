@@ -1,7 +1,7 @@
 package com.xjc.study.algorithm.sort;
 
 /**
- *  冒泡排序
+ *  冒泡排序 时间复杂度O(n)
  * @title: BubbleSort
  * @Author 19040838
  * @Date: 2020.11.26 16:53

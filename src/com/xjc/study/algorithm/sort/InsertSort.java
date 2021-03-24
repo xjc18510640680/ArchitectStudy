@@ -11,7 +11,7 @@ import com.xjc.study.toolutils.ArrayUtils;
 public class InsertSort {
 
     /**
-     * @Description 插入排序
+     * @Description 插入排序 时间复杂度O(n)
      * @Author 19040838
      * @Date 2020.11.26 21:32
      **/
