@@ -1,15 +1,12 @@
 package com.xjc.study.exam;
 
-import com.xjc.study.toolutils.ArrayUtils;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Description: TODO
- *
+ * 合并交叉区间
  * @title: Demo
  * Created by 19040838 on 2021.02.18 18:53
  */

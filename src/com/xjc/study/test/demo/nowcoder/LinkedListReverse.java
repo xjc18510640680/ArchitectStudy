@@ -11,12 +11,13 @@ public class LinkedListReverse {
 
     // 测试
     public static void main(String[] args) {
-        ListNode listNode = null;
-        listNode = new ListNode(1);
-        listNode.next = new ListNode(2);
-        listNode.next.next = new ListNode(3);
+        ListNode listNode = MyListNode.init(6);
+        MyListNode.print(listNode);
+        System.out.println();
         ListNode result = reverse(listNode);
-        System.out.println(result.val + " " + result.next.val + " " + result.next.next.val);
+        MyListNode.print(result);
+        System.out.println();
+        System.out.println(MyListNode.size(result));
     }
 
     public static ListNode reverseList(ListNode head) {
@@ -54,7 +55,6 @@ public class LinkedListReverse {
 class ListNode {
     int val;
     ListNode next = null;
-
     ListNode(int val) {
         this.val = val;
     }
