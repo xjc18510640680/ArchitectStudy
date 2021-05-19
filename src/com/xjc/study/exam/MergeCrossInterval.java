@@ -7,10 +7,11 @@ import java.util.List;
 /**
  * Description: TODO
  * 合并交叉区间
+ * @author xujiucheng
  * @title: Demo
  * Created by 19040838 on 2021.02.18 18:53
  */
-public class Demo {
+public class MergeCrossInterval {
     public static void main(String[] args) {
         List<Intervals> intervals = new ArrayList<>();
         intervals.add(new Intervals(1, 11));
@@ -45,18 +46,4 @@ public class Demo {
         return resultList;
     }
 
-}
-
-class Intervals {
-    int a;
-    int b;
-    Intervals() {
-        a = 0;
-        b = 0;
-    }
-
-    Intervals(int m, int n) {
-        a = m;
-        b = n;
-    }
 }

@@ -9,16 +9,16 @@ import java.util.Scanner;
  * @title: Main
  * Created by 19040838 on 2021.02.01 21:22
  */
-public class Main {
+public class Unzip {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
             String input = sc.nextLine();
-            System.out.println(jieya(input));
+            System.out.println(unzip(input));
         }
     }
 
-    private static String jieya(String input) {
+    private static String unzip(String input) {
         if (input == null || input.trim() == "") {
             return "";
         }
@@ -39,7 +39,7 @@ public class Main {
         sort(intList, strList, 0, intList.size() - 1);
         int count = 0;
         for (int i = 0; i < intList.size() - 1; i++) {
-            if (intList.get(i) == intList.get(i + 1)) {
+            if (intList.get(i).equals(intList.get(i + 1))) {
                 count++;
             } else {
                 if (count > 0) {
