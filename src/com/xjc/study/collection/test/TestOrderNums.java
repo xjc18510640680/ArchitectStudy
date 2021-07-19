@@ -1,5 +1,6 @@
 package com.xjc.study.collection.test;
 
+import com.xjc.study.collection.AfterSaleDetailTagEnum;
 import com.xjc.study.collection.entity.OrderPo;
 
 import java.util.ArrayList;
@@ -28,5 +29,6 @@ public class TestOrderNums {
         System.out.println(orderPos.stream().mapToLong(orderPos -> orderPos.getPrice()).min());
         System.out.println(orderPos.stream().mapToLong(orderPos -> orderPos.getPrice()).average());
         System.out.println(orderPos.stream().mapToLong(orderPos -> orderPos.getPrice()).count());
+        System.out.println(AfterSaleDetailTagEnum.isTagOrder(AfterSaleDetailTagEnum.ZYCS.getCode(), 2048L));
     }
 }
