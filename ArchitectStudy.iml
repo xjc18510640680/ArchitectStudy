@@ -15,7 +15,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://D:/软件安装/apache-tomcat-7.0.91/lib/servlet-api.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../软件安装/apache-tomcat-7.0.91/lib/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -49,5 +49,8 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="commons-beanutils-1.9.4" level="project" />
+  </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="f0f5177c-d028-4d72-b41f-93713911bd6d" />
   </component>
 </module>

@@ -117,3 +117,7 @@
 /out/production/ArchitectStudy/com/xjc/study/test/Test.class
 /out/production/ArchitectStudy/com/xjc/study/exam/MergeCrossInterval.class
 /out/production/ArchitectStudy/com/xjc/study/exam/Unzip.class
+.idea/*
+*.iml
+*.iws
+*.gitignore
